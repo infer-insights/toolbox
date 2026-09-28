@@ -19,7 +19,8 @@ Learning progress, best practices and code examples:
  1.010 -  1.019 
     # "HTTP request and response”  
   - structure: Start Line, Headers, Blank Line, Body
-  - #HTTP Start Line:
+  - #HTTP Start Line:  
+
 | HTTP Start Line | Request | Response |
 | -------- | -------- | -------- |
 | Name | Start Line, Request Line | Start Line, Response Line, Status Line |
@@ -29,7 +30,8 @@ Learning progress, best practices and code examples:
 | Parameters (opt) | Yes (example: ?q=tuna) | No |
 | Status Code | No | Yes (example: 200 OK) |
 | Format | Method(space)API Program Folder <br> Location+Parameters(space)HTTP Version | HTTP Version + Status Code |
-| Example | GET /search?q=tuna HTTP/1.1 | HTTP/1.1 200 OK |
+| Example | GET /search?q=tuna HTTP/1.1 | HTTP/1.1 200 OK |  
+
   - #idempotence - safe to repeat
   - GET, PUT, DELETE - Yes, POST - No
     #Header Line
