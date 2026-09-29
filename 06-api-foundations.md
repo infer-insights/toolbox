@@ -5,7 +5,7 @@ PROJECT: Core concepts and hands-on examples for working with APIs — authentic
 
 
 Learning progress, best practices and code examples:
-1. Training: API and Web serviced Introduction - Nate Ross [Udemy], progress: (26 of 57 completed)
+1. Training: API and Web serviced Introduction - Nate Ross [Udemy], progress: (29 of 57 completed)
   - #direct link to the training:
   - https://www.udemy.com/course/api-and-web-service-introduction
 2. Training: Hands-on challenge with postman, progress: (0 Badges).  
@@ -66,25 +66,30 @@ Learning progress, best practices and code examples:
   - HTTP Body: XML  
   - uses tags <> just like HTML (ex <button>Click ME!</button>) 
       XML W3C standard, tags describe data in it, you cen customize tags - eXtensible
-      <Pizza>  
-          <Size>Small</Size>  
-          <Toppings>  
-              <Topping>Onions</Topping>  
-              <Topping>Mushrooms</Topping>  
-          </Toppings>  
-      </Pizza> 
+  ```
+    <Pizza>
+      <Size>Small</Size>
+      <Toppings>
+        <Topping>Onions</Topping>
+        <Topping>Mushrooms</Topping>
+      </Toppings>
+    </Pizza>
+  ```
+
   - XSD - required schema for XML  
 
   - #JSON - JavaScript Object Notation,  
   - HTTP Header Line: Content-Type: application/json  
   - HTTP Body: XML
   - uses pairs "Key" : "Value" (ex. "Size" : "Small")  
+  ```  
       { "Pizza" : [
           {"Size" : "Smalll",
            "Topping" : ["Onions","Mushrooms"]
             }  
             ]  
       }  
+  ``` 
   - JSON Edit Chrome: web store, json extensions, add local file option, ctrl+o, www.json.org  
 
   - #SOAP vs REST - ways to form Requests and Reponds,  
@@ -94,6 +99,8 @@ Learning progress, best practices and code examples:
                 POST - just placehold, doesnt mean it always puts information  
                 WSDL - location  
   - Header Line: Content-Type: text/xml  
-  - Body:        XML envelope formed using WSDL
+  - Body:        XML envelope formed using WSDL 
+
+  - #REST - ways to form Requests and Reponds
 
 
