@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (31% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (33% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -136,7 +136,11 @@ SQL Toolbox - Examples of applied solutions
 	--COUNT(*) #counts including null rows
 	--COUUNT(DISTINCT col)	#counts column records
 	--SUM, AVG - ignores NULLs, MIN, MAX 
-
+2.010:
+	--GROUP BY, ORDER BY 
+	-- every column in SELECT must be either in GROUP BY or aggregate function
+2.011:
+	--HAVING	 
 
 2.024:
 	--CTE syntax:

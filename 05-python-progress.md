@@ -209,5 +209,11 @@ Learning progress, best practices and code examples:
   - .describe() = .agg() with all stat
   - .T transpose into rows
 
-
+3.008    
+    # group by
+  - .groupby("col")["calc_col"]
+                      .count()
+                      .reset_index(name="calc_col_name") # index change into col
+  - #counted "calc_col" and grouped by "col" adding new "calc_col_name"
+  - multiple(["sum", "mean"]).reset_index()
 
