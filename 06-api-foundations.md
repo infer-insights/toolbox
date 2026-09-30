@@ -8,7 +8,7 @@ Learning progress, best practices and code examples:
 1. Training: API and Web serviced Introduction - Nate Ross [Udemy], progress: (29 of 57 completed)
   - #direct link to the training:
   - https://www.udemy.com/course/api-and-web-service-introduction
-2. Training: Hands-on challenge with postman, progress: (0 Badges).  
+2. Training: Hands-on challenge with postman, progress: API Beginner (1 of 7 completed).  
   - #direct link to the training:  
   - https://academy.postman.com/  
   - Badges/Modules completed:  
