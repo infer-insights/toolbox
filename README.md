@@ -24,10 +24,11 @@ Exploring the Snowflake capabilities as corporate cloud data platform, environme
 Building foundations while documenting baby steps and milestones as I bring the language into my technology stack.
 
 ### 📄[06-api-foundations.md](./06-api-foundations.md) — Data integration with APIs
-Learning data integration through Salesforce's Trailhead, the industry-leading CRM platform.
+Learning data integration through Postman and Salesforce's Trailhead, the industry-leading standards.
 
 ### 📄[07-best-practice.md](./07-best-practice.md) — Business Analysis Core Concept Model (BACCM)
-Core concepts and foundational framework of Business Analysis process. 
+Core concepts and foundational framework of Business Analysis process.  
+ 
 ---
 
 ## Engineering Principles
