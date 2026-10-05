@@ -97,12 +97,18 @@ Learning progress, best practices and code examples:
   - #SOAP vs REST - ways to form Requests and Reponds,  
   - #SOAP - Simple Object (way to access web service) Access Protocol (by following rules)
   - uses; WSDL (Web Services Descriptin Language)
-  - Start Line: POST WSDL HTTP Version POST  
+  - Start Line: POST WSDL HTTP Version POST (does not use method, POST as default) 
                 POST - just placehold, doesnt mean it always puts information  
                 WSDL - location  
   - Header Line: Content-Type: text/xml  
   - Body:        XML envelope formed using WSDL 
 
-  - #REST - ways to form Requests and Reponds
+  - #REST - ways to form Requests and Reponds, calling records: GET, POST, PUT, DELETE
+  - Representational State Transfer
+  - CACHE - updates GET only when not already exist  
+  - Start Line: GET, POST, PUT, DELETE
+  - Header Line: any header
+  - Blank Line:   
+  - Body: Any (JSON, XML, images, html web pages, etc.) 
 
 

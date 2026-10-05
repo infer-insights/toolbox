@@ -33,8 +33,8 @@ PROJECT: SNOWFLAKE HANDS ON PRACTISE
     --JSON EDITOR Online - text, tree, table structure of json file    
     https://jsoneditoronline.org/
 1.003 
-    --# Resources: DAMA-DMBOK  
-    --snowflakes summary of data governance by DAMA    
+    --# Resources: DAMA-DMBOK reference  
+    --Practical guide to Data Management summary    
     https://www.snowflake.com/en/data-governance/frameworks/dama-dmbok/
 
 */

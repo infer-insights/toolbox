@@ -140,8 +140,16 @@ SQL Toolbox - Examples of applied solutions
 	--GROUP BY, ORDER BY 
 	-- every column in SELECT must be either in GROUP BY or aggregate function
 2.011:
-	--HAVING	 
-
+	--HAVING
+	--WHERE filters rows - before GROUP BY, HAVING filters aggregations after	 
+	--#EXECUTION ORDER
+		1. FROM: Get the table  
+		2. WHERE: Filter individual rows  
+		3. GROUP BY: Create groups from remaining rows
+		4. HAVING: Filter groups  
+		5. SELECT: Calculate and choose columns  
+		6. ORDER BY: Sort the results
+	-- HAVING - does not accept column aliases (except MySQL)
 2.024:
 	--CTE syntax:
 	--CTE location before main query w. SELECT
