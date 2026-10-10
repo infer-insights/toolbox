@@ -43,7 +43,7 @@ Learning progress, best practices and code examples:
   - .format() index positions and keywords ex. print('string {1} {a}'.format(a='str0','str1'))
   - float formatting "{value:width.precision f}"
   - ex. print("The result{r:1.3f}".format(r=result)) {r:width.precision}
-  - newer method: print(f'{name} is {age} years old.') as of python 3.6
+  - newer method, formattet string : print(f'{name} is {age} years old.') as of python 3.6
   - https://pyformat.info/ #string formatting documentation  
 
 2.026   

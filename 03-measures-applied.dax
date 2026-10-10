@@ -1,18 +1,29 @@
 /*
 ==================================================
+#"Semantic:Giving meaning to your data Model:Modeling a real world business process"
 PROJECT: PBI Dax Measures syntax and calculation logic
 Date: 2026
 
+1. Training: Hands-on challenge with tabular editor, progress: (1 in progress).
+  - #Tabular Editor for Beginners:
+  - https://learn.tabulareditor.com/beginnercourse , progress: (1 of 4 sections completed)
+  
+
 Structured approach and code examples:
-1.001 selected category dedicated measure
-1.002 category calculation adjusted with variable 
-1.003 multi criteria measure calc with keeping filters active,
+2.001 selected category dedicated measure
+2.002 category calculation adjusted with variable 
+2.003 multi criteria measure calc with keeping filters active,
       naming convention approach
 ==================================================
 */
 
-
 1.001 
+    // Objectives and key results (OKRs) framework, 
+    // objectives are clear, high-level descriptions of what you want to achieve. 
+    // key results are specific, achievable outcomes to measure progress toward one of your objectives.
+    // initiatives or solutions are processes or tools built to help you achieve one or more key results.
+
+2.001 
     // calculation limited to selected category
     // "LOC Cr Net, Cat" = "local currency created net sales, category_name".
       LOC Cr Net, Category = 
@@ -30,7 +41,7 @@ Structured approach and code examples:
           )
           RETURN
           _LOC_Cr_Net_Category
-1.002
+2.002
     // category based calc adjustment
       Qty Cr Net, Adjusted = 
       VAR _CategoryShare = [NonStandardCategoryAdj]
@@ -53,7 +64,7 @@ Structured approach and code examples:
              0,
              _Qty_Cr_Net_Adj
          )
-1.003 
+2.003 
     // volume calc of applicatble data for sales with PRS category only
     // measure naming convention details: 
     // "TY w s. 'M3'Ex"= "This Year Volume of products, sold with services from sel data source [qubic meters]"
