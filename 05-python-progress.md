@@ -9,7 +9,7 @@ Learning progress, best practices and code examples:
 2. Training: The Complete Python Bootcamp From Zero to Hero in Python, progress: (29 of 170 completed)
   - #official repositories provided by the course instructor
   - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp.git
-3. Training: Hands-on challenge with "stratascratch.com" Python path with Pandas library, progress: (19% completed).
+3. Training: Hands-on challenge with "stratascratch.com" Python path with Pandas library, progress: (22% completed).
   - #direct link to the training:
   - https://www.stratascratch.com/learn/comprehensive-python  
 
@@ -218,4 +218,8 @@ Learning progress, best practices and code examples:
                       .reset_index(name="calc_col_name") # index change into col
   - #counted "calc_col" and grouped by "col" adding new "calc_col_name"
   - multiple(["sum", "mean"]).reset_index()
+  - df.query("position == 1") to filter column  
 
+3.009    
+    # filtering groups 
+    df[df["position"] == 1] similar to  df.query("position == 1")

@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (33% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (39% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -141,7 +141,8 @@ SQL Toolbox - Examples of applied solutions
 	-- every column in SELECT must be either in GROUP BY or aggregate function
 2.011:
 	--HAVING
-	--WHERE filters rows - before GROUP BY, HAVING filters aggregations after	 
+	--WHERE filters rows - before GROUP BY, HAVING filters aggregations after
+	--dual HAVING with AND, aggregates ignore NULLs
 	--#EXECUTION ORDER
 		1. FROM: Get the table  
 		2. WHERE: Filter individual rows  
@@ -149,7 +150,25 @@ SQL Toolbox - Examples of applied solutions
 		4. HAVING: Filter groups  
 		5. SELECT: Calculate and choose columns  
 		6. ORDER BY: Sort the results
-	-- HAVING - does not accept column aliases (except MySQL)
+	-- HAVING - does not accept column aliases (except MySQL)  
+2.012:
+	--NULLS count(*) count rows <> count(column) excludes nulls
+	--#NULLIF
+		NULLIF(COUNT(*) or x, 0)  -- Returns NULL if x equals 0, otherwise returns x 
+		3 / 4 --Returns 0 (integer division!)
+		CAST(3 AS DECIMAL) / 4 --returns 0.75  
+		CTR (Click-Through Rate) , CVR (Conversion Rate)  
+	--Summary:
+		SUM, AVG, MIN, MAX all ignore NULL values  
+		AVG divides by the count of non-NULL values, not total rows  
+		COUNT(*) includes NULLs; COUNT(column) excludes them  
+		Aggregates on empty results return NULL (except COUNT, which returns 0)  
+		Use NULLIF(denominator, 0) to prevent division errors  
+		Use CAST(x AS DECIMAL) to enable decimal division  
+		Calculate ratios (0 to 1), not percentages. Convert only for display.  
+		Use COALESCE to substitute values for NULLs, but only when appropriate  
+		NULL values form their own group in GROUP BY  
+
 2.024:
 	--CTE syntax:
 	--CTE location before main query w. SELECT
