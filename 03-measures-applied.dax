@@ -1,7 +1,7 @@
 /*
 ==================================================
 #"Semantic:Giving meaning to your data Model:Modeling a real world business process"
-PROJECT: PBI Dax Measures syntax and calculation logic
+PROJECT: Semantic Model Design, PBI Dax Measures syntax and calculation logic
 Date: 2026
 
 1. Training: Hands-on challenge with tabular editor, progress: (1 in progress).
@@ -12,10 +12,10 @@ Date: 2026
  
   
 
-Structured approach and code examples:
-2.001 selected category dedicated measure
-2.002 category calculation adjusted with variable 
-2.003 multi criteria measure calc with keeping filters active,
+2.  Structured approach and Power BI DAX code examples:
+  - .001 selected category dedicated measure
+  - .002 category calculation adjusted with variable 
+  - .003 multi criteria measure calc with keeping filters active,
       naming convention approach
 ==================================================
 */
