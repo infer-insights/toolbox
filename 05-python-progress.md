@@ -9,9 +9,10 @@ Learning progress, best practices and code examples:
 2. Training: The Complete Python Bootcamp From Zero to Hero in Python, progress: (29 of 170 completed)
   - #official repositories provided by the course instructor
   - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp.git
-3. Training: Hands-on challenge with "stratascratch.com" Python path with Pandas library, progress: (22% completed).
+3. Training: Hands-on challenge with "stratascratch.com" Python path with Pandas library, progress: (25% completed).
   - #direct link to the training:
-  - https://www.stratascratch.com/learn/comprehensive-python  
+  - https://www.stratascratch.com/learn/comprehensive-python
+
 
 ==================================================
 
@@ -21,7 +22,7 @@ Learning progress, best practices and code examples:
   - https://python.org/pep-0008/  
 
 1.002    
-    # daily practice resources  
+    # practice resources  
   - http://codingbat.com/python #basic practice
   - https://projecteuler.net/archives #More Mathematical (and Harder) Practice
   - http://www.codeabbey.com/index/task_list #List of Practice Problems
@@ -217,9 +218,20 @@ Learning progress, best practices and code examples:
                       .count()
                       .reset_index(name="calc_col_name") # index change into col
   - #counted "calc_col" and grouped by "col" adding new "calc_col_name"
-  - multiple(["sum", "mean"]).reset_index()
-  - df.query("position == 1") to filter column  
+  - multiple - instead of .count use .agg(["sum", "mean"]).reset_index()
+  - df.query("position == 1") to filter column at the start 
 
 3.009    
     # filtering groups 
     df[df["position"] == 1] similar to  df.query("position == 1")
+    calc_df_name[calc_df_name["calc_col_name"] >= 3]
+    Before grouping — filter individual rows (e.g., only employees hired after 2022)
+    After grouping — filter groups by their aggregated values (e.g., only departments with 5+ people)
+    multi grouping: combined = pd.merge(
+                      first_grouping_df, 
+                      second_grouping_df, 
+                      on="grouping_column", 
+                      how="inner"
+                    )
+    seqeunce: filter rows → group → aggregate → filter groups.
+

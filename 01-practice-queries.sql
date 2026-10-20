@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (39% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (42% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -168,6 +168,24 @@ SQL Toolbox - Examples of applied solutions
 		Calculate ratios (0 to 1), not percentages. Convert only for display.  
 		Use COALESCE to substitute values for NULLs, but only when appropriate  
 		NULL values form their own group in GROUP BY  
+2.012:
+	--Conditional Aggregation
+	SELECT 
+
+  		ROUND(100.0*
+  		sum(CASE WHEN status = 'open' AND country = 'USA' THEN 1 ELSE 0 END)
+  		/ COUNT(name),
+    	2
+  		) AS active_rate
+	FROM fb_active_users AS fa;
+	--WHEN salary IS NULL THEN NULL -- Exclude from count entirely
+	SUM(CASE WHEN condition THEN 1 ELSE 0 END) counts matching rows
+	This lets get multiple conditional counts without GROUP BY
+	NULL values fall through to ELSE (treated as non-matching)
+	Use it for percentages: conditional count divided by total count
+	Use 100.0 for percentages to avoid integer division
+	You can sum values conditionally, not just count
+	Combined with GROUP BY, can create pivot-style reports
 
 2.024:
 	--CTE syntax:
