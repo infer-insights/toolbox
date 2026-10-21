@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (42% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (47% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -186,6 +186,17 @@ SQL Toolbox - Examples of applied solutions
 	Use 100.0 for percentages to avoid integer division
 	You can sum values conditionally, not just count
 	Combined with GROUP BY, can create pivot-style reports
+2.013:
+	--Query building sequence
+	Start with SELECT and FROM
+	Add WHERE if you need to filter individual rows
+	Add GROUP BY with the columns you want to segment by
+	Add HAVING if you need to filter based on aggregate values
+	Add ORDER BY to sort your results
+	Test after each step
+	-- multilpy by 1.0 to see decimals ROUND(AVG(salary * 1.0), 2) AS avg_salary 
+2.013:
+	--joining tables
 
 2.024:
 	--CTE syntax:
