@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (47% completed)
+2. Training: Hands on challenge with "stratascratch.com" comprehensive sql path, progress: (50% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -195,8 +195,24 @@ SQL Toolbox - Examples of applied solutions
 	Add ORDER BY to sort your results
 	Test after each step
 	-- multilpy by 1.0 to see decimals ROUND(AVG(salary * 1.0), 2) AS avg_salary 
-2.013:
-	--joining tables
+2.016:
+	--UNION ALL, UNION - removes duplicates
+	--Column names in the result come from the first SELECT. The second SELECT’s column names are ignored.
+	UNION stacks rows vertically (vs JOIN, which combines columns horizontally)
+	Both SELECTs must have the same number of columns with compatible types
+	UNION removes duplicates, UNION ALL keeps them (prefer UNION ALL)
+	ORDER BY goes at the end, applying to the combined result
+	Add a source column to track where each row came from
+2.016:
+	--JOIN with concatenation key instead of concatenate strings
+	SELECT DISTINCT
+		h.host_id,
+		g.guest_id
+	FROM airbnb_hosts h
+	INNER JOIN airbnb_guests g
+    	ON h.gender = g.gender
+    	AND h.nationality = g.nationality
+	ORDER BY h.host_id;
 
 2.024:
 	--CTE syntax:

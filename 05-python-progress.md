@@ -9,7 +9,7 @@ Learning progress, best practices and code examples:
 2. Training: The Complete Python Bootcamp From Zero to Hero in Python, progress: (29 of 170 completed)
   - #official repositories provided by the course instructor
   - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp.git
-3. Training: Hands-on challenge with "stratascratch.com" Python path with Pandas library, progress: (28% completed).
+3. Training: Hands-on challenge with "stratascratch.com" comprehensive Python path, progress: (28% completed).
   - #direct link to the training:
   - https://www.stratascratch.com/learn/comprehensive-python
 
@@ -223,19 +223,63 @@ Learning progress, best practices and code examples:
 
 3.009    
     # filtering groups 
-    df[df["position"] == 1] similar to  df.query("position == 1")
-    calc_df_name[calc_df_name["calc_col_name"] >= 3]
-    Before grouping — filter individual rows (e.g., only employees hired after 2022)
-    After grouping — filter groups by their aggregated values (e.g., only departments with 5+ people)
-    multi grouping: combined = pd.merge(
+  -- df[df["position"] == 1] similar to  df.query("position == 1")
+  - calc_df_name[calc_df_name["calc_col_name"] >= 3]
+  - Before grouping — filter individual rows (e.g., only employees hired after 2022)
+  - After grouping — filter groups by their aggregated values (e.g., only departments with 5+ people)
+  - multi grouping: combined = pd.merge(
                       first_grouping_df, 
                       second_grouping_df, 
                       on="grouping_column", 
                       how="inner"
                     )
-    seqeunce: filter rows → group → aggregate → filter groups.
-    len(df) counts whole df including NaN
-    .fillna(0) before aggr treats missing as 0, groupby() drops NaN, 
+  - seqeunce: filter rows → group → aggregate → filter groups.
+  - len(df) counts whole df including NaN
+  - .fillna(0) before aggr treats missing as 0, groupby() drops NaN, 
 3.011    
-    # conditional aggregation 
+    # conditional aggregation
+```
+  import pandas as pd
 
+  fc = facebook_complaints
+
+  proc = fc["processed"] == True
+  proc_df = fc[proc]
+
+  grouped = (proc_df.groupby("type")["complaint_id"]
+          .count()
+          .reset_index(name="type_count"))
+        
+  grouped_tot = (fc.groupby("type")["complaint_id"]
+          .count()
+          .reset_index(name="all_count"))
+        
+  combined = pd.merge(
+                    grouped, 
+                    grouped_tot,
+                    on="type",
+                    how="inner")
+  combined["share"] = (1.0 * combined["type_count"] / combined["all_count"]).round(2)
+  
+  combined = combined[["type", "share"]]
+```
+    # second solution that wont filter df twice
+```
+    fc = facebook_complaints
+
+    # 1. Create a logical integer column where True becomes 1 and False becomes 0
+    fc["is_proc"] = (fc["processed"]).astype(int)
+
+    # 2. Group by type and calculate both processed count (sum) and total count (size) in a single step
+    summary = (
+       fc.groupby("type")["is_proc"]
+        .agg(type_count="sum", all_count="size")
+        .reset_index()
+    )
+
+    # 3. Compute the percentage share directly on the aggregated columns
+    summary["share"] = (1.0 * summary["type_count"] / summary["all_count"]).round(2)
+
+    # 4. Filter the final DataFrame to keep only the required columns
+    final_result = summary[["type", "share"]]
+```
