@@ -235,10 +235,11 @@ Learning progress, best practices and code examples:
                     )
   - seqeunce: filter rows → group → aggregate → filter groups.
   - len(df) counts whole df including NaN
-  - .fillna(0) before aggr treats missing as 0, groupby() drops NaN, 
+  - .fillna(0) before aggr treats missing as 0, groupby() drops NaN,  
+   
 3.011    
     # conditional aggregation  
-    
+
 ```
   import pandas as pd
 
