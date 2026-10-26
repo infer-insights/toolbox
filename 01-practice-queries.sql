@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (53% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (58% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -213,6 +213,19 @@ SQL Toolbox - Examples of applied solutions
     	ON h.gender = g.gender
     	AND h.nationality = g.nationality
 	ORDER BY h.host_id;
+2.017:	
+	-- add WHERE to keep only unmatched rows
+	SELECT
+  		c.id,
+	--  o.cust_id,
+  		c.first_name,
+  		c.city
+	FROM customers c
+	LEFT JOIN orders o
+  		ON c.id = o.cust_id
+	WHERE o.cust_id IS NULL
+	--ORDER BY c.id asc
+	
 
 2.024:
 	--CTE syntax:

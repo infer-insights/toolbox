@@ -9,7 +9,7 @@ Learning progress, best practices and code examples:
 2. Training: The Complete Python Bootcamp From Zero to Hero in Python, progress: (29 of 170 completed)
   - #official repositories provided by the course instructor
   - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp.git
-3. Training: Hands-on challenge with "stratascratch.com" pandas Python path, progress: (33% completed).
+3. Training: Hands-on challenge with "stratascratch.com" pandas Python path, progress: (39% completed).
   - #direct link to the training:
   - https://www.stratascratch.com/learn/comprehensive-python
 
@@ -285,3 +285,5 @@ Learning progress, best practices and code examples:
     # 4. Filter the final DataFrame to keep only the required columns
     final_result = summary[["type", "share"]]
 ```
+3.014    
+    # pd.concat() vs pd.merge() 
