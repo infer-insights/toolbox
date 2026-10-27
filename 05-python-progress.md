@@ -287,3 +287,46 @@ Learning progress, best practices and code examples:
 ```
 3.014    
     # pd.concat() vs pd.merge() 
+```
+    p1 = winemag_p1.copy()
+    p1["source"] = "dataset_1"
+
+    p2 = winemag_p2.copy()
+    p2["source"] = "dataset_2"
+
+    pd.concat([p1, p2], ignore_index=True)
+```
+  --.copy() - dont want to alter initial table just create new with source column
+```
+    gf = google_friends_network
+
+    gf2 = gf.rename(
+        columns={'user_id': 'friend_id','friend_id': 'user_id'}
+    )
+    combined = pd.concat([gf, gf2], ignore_index=True).drop_duplicates()
+```  
+3.015    
+    # pd.concat() vs pd.merge()  
+```
+    result = pd.merge(left_df, right_df, left_on="fk", right_on="pk") 
+    result = pd.merge(df_a, df_b, on="shared_column"
+```  
+    When both DataFrames have a column with the same name (like id), pandas adds _x and _y suffixes. 
+    Control this with suffixes=("_order", "_customer").  
+```
+    c = customers
+    o = orders
+
+    names = ["Jill", "Eva"]
+
+    c_filtered = c[c["first_name"].isin(names)]
+
+    c_active = pd.merge(
+        o, c_filtered,
+        left_on="cust_id", right_on="id"
+    ).sort_values("cust_id", ascending = True)
+
+    columns = ["first_name","order_date", "order_details", "total_order_cost"]
+
+    c_active[columns]
+```    

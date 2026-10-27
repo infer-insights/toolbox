@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (58% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (61% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================

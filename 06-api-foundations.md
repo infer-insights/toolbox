@@ -13,7 +13,7 @@ Learning progress, best practices and code examples:
   - https://academy.postman.com/  
   - Badges/Modules completed:  
   - https://www.credly.com/users/robert-posiadala-rp1
-3. Training: Hands-on challenge with salesforce, Rank: EXPLORER, progress: (12 Badges).
+3. Training: Hands-on challenge with salesforce, Rank: EXPLORER, progress: (14 Badges).
   - #direct link to the training:
   - https://trailhead.salesforce.com
   - Badges/Modules completed:
