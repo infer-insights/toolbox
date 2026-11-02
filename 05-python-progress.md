@@ -9,7 +9,7 @@ Learning progress, best practices and code examples:
 2. Training: The Complete Python Bootcamp From Zero to Hero in Python, progress: (29 of 170 completed)
   - #official repositories provided by the course instructor
   - https://github.com/Pierian-Data/Complete-Python-3-Bootcamp.git
-3. Training: Hands-on challenge with "stratascratch.com" pandas Python path, progress: (39% completed).
+3. Training: Hands-on challenge with "stratascratch.com" pandas Python path, progress: (42% completed).
   - #direct link to the training:
   - https://www.stratascratch.com/learn/comprehensive-python
 
@@ -329,4 +329,47 @@ Learning progress, best practices and code examples:
     columns = ["first_name","order_date", "order_details", "total_order_cost"]
 
     c_active[columns]
-```    
+```     
+3.016    
+    # pd.merge()  
+```
+    result = pd.merge(
+        customers, orders,
+        left_on="id", right_on="cust_id",
+        how="left", indicator=True
+    )
+    result["_merge"].value_counts()  # _merge indicates which joined
+
+    # both        → matched in both
+    # left_only   → customer with no orders
+```
+```
+    ah = airbnb_hosts
+    au = airbnb_units
+
+    ah_USA_u30 = ah[(ah["age"]<30) & (ah["nationality"] == 'USA')]
+
+
+    result = pd.merge(
+        ah_USA_u30[["host_id", "age", "nationality"]], au,
+        left_on="host_id", right_on="host_id",
+        how="left"
+    )
+
+    summary = (result.groupby(["nationality"])["unit_type"]
+        .nunique()
+        .reset_index(name="type_count")
+    )
+```
+```
+    ah = airbnb_hosts
+    ag = airbnb_guests
+
+    matching = pd.merge(
+        ah, ag,
+        on=["nationality","gender"],
+        how="inner"
+    ).drop_duplicates()
+
+    result = matching[["host_id", "guest_id"]]
+```

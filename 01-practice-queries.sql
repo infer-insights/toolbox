@@ -225,7 +225,19 @@ SQL Toolbox - Examples of applied solutions
   		ON c.id = o.cust_id
 	WHERE o.cust_id IS NULL
 	--ORDER BY c.id asc
-	
+2.018:	
+	-- use allias to join inside same column
+	SELECT
+		f1.id as f1_emp_id,
+		f2.id as f2_emp_id
+	FROM facebook_employees f1
+	INNER JOIN facebook_employees f2
+	ON f1.location = f2.location
+	WHERE f1.gender = f2.gender
+	AND f1.id <> f2.id
+	AND f1.age <> f2.age
+	AND f1.is_senior <> f2.is_senior
+	;	
 
 2.024:
 	--CTE syntax:
