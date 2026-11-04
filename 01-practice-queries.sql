@@ -8,7 +8,7 @@ SQL Toolbox - Examples of applied solutions
 1. T-SQL code examples 
 	1.001: active units machines selection
 	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (61% completed)
+2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (67% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
 ============================================================
@@ -232,13 +232,27 @@ SQL Toolbox - Examples of applied solutions
 		f2.id as f2_emp_id
 	FROM facebook_employees f1
 	INNER JOIN facebook_employees f2
-	ON f1.location = f2.location
+		ON f1.location = f2.location
 	WHERE f1.gender = f2.gender
 	AND f1.id <> f2.id
 	AND f1.age <> f2.age
 	AND f1.is_senior <> f2.is_senior
 	;	
-
+2.019:	
+	-- multiple joins
+	SELECT
+		eh.manager_empl_id AS mgr_id,
+		mgr.salary AS mgr_salary,
+		AVG(emp.salary) AS avg_emp_salary	
+	FROM map_employee_hierarchy eh
+	INNER JOIN dim_employee mgr
+		ON eh.manager_empl_id = mgr.empl_id
+	INNER JOIN dim_employee emp
+		ON eh.empl_id = emp.empl_id
+	GROUP BY
+		eh.manager_empl_id,
+		mgr.salary
+	HAVING mgr.salary < (AVG(emp.salary) * 2);
 2.024:
 	--CTE syntax:
 	--CTE location before main query w. SELECT
