@@ -4,10 +4,10 @@
 PROJECT: Semantic Model Design, PBI Dax Measures syntax and calculation logic
 Date: 2026
 
-1. Training: Hands-on challenge with tabular editor, progress: (1 in progress).
+1. TrainSing: Hands-on challenge with tabular editor, progress: (1 in progress).
   - #Tabular Editor for Beginners:
   - https://learn.tabulareditor.com/beginnercourse , progress: (1 of 4 sections completed)
-  - #hands on challenge: data load and preparation into Fabric using PySpark Notebooks
+  - #Training: Hands-on challenge with data load and preparation into Fabric using PySpark Notebooks
   - data source: SQL Endpoint: te3-training-eu.database.windows.net
  
   

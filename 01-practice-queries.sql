@@ -299,3 +299,39 @@ SQL Toolbox - Examples of applied solutions
 			SELECT *	--whats the final output
 		FROM third_cte;
 	--each CTE can reference any CTE defined before it, but not after. Order matters.
+	--excercise - total rev calculated by employee where bonus exists
+		WITH tot_bonus AS (
+			SELECT
+				b.worker_ref_id as ref_id,
+				sum(b.bonus) AS tot_bonus
+			FROM
+				sf_bonus b
+			GROUP BY
+				b.worker_ref_id
+		),
+		E_w_tot_bonus AS (
+			SELECT 
+				e.id,
+				e.employee_title as title,
+				e.salary,
+				e.sex as gender,
+				tb.tot_bonus
+			FROM sf_employee e
+			INNER JOIN tot_bonus tb
+			ON  e.id = tb.ref_id
+		),
+		avg_tot AS (
+		SELECT 
+			title,
+			gender,
+			count(id) as empl_count,
+			SUM(COALESCE(salary, 0) + COALESCE(tot_bonus, 0)) AS grand_tot
+		FROM E_w_tot_bonus
+		GROUP BY title, gender
+		)
+		SELECT 
+			title,
+			gender,
+			grand_tot/empl_count as avg_sal
+		FROM avg_tot
+		;
