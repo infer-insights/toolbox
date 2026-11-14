@@ -5,12 +5,10 @@ SQL Toolbox - Examples of applied solutions
 
 
 ### Environment Best Practices and code examples:
-1. T-SQL code examples 
-	1.001: active units machines selection
-	1.002: ranked retail unit with largest turnover selection
-2. Training: Hands on challenge with "stratascratch.com" sql path, progress: (67% completed)
+1. Training: Hands on challenge with "stratascratch.com" sql path, progress: (67% completed)
     - # direct link to the training
     - https://www.stratascratch.com/learn/comprehensive-sql
+2. T-SQL code examples 
 ============================================================
 */
    /* 
