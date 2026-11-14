@@ -16,98 +16,23 @@ Learning progress, best practices and code examples:
 
 ==================================================
 
-1.001    
-    # "code is read much more often than it is written", “readability counts”  
-  - Official PEP 8 coding style guidelines and industry standards for clean Python code:  
-  - https://python.org/pep-0008/  
+---
 
-1.002    
-    # practice resources  
-  - http://codingbat.com/python #basic practice
-  - https://projecteuler.net/archives #More Mathematical (and Harder) Practice
-  - http://www.codeabbey.com/index/task_list #List of Practice Problems
-  - https://www.reddit.com/r/dailyprogrammer #A SubReddit Devoted to Daily Practice Problems:
-  - http://www.pythonchallenge.com/ #tricky with very few hints
+## Python Fundamentals study log
+* [2.035 — Base Subject (Placeholder)](#2035--base-subject-placeholder)
+* [2.034 — Base Subject (Placeholder)](#2034--base-subject-placeholder)
+* [2.033 — Basic File I/O](#2033--basic-file-io)
+* [2.032 — Booleans](#2032--booleans)
+* [2.031 — Sets](#2031--sets)
+* [2.030 — Tuples](#2030--tuples)
+* [2.028 — Dictionaries](#2028--dictionaries)
+* [2.026 — Lists](#2026--lists)
+* [2.024 — String Interpolation & Formatting](#2024--string-interpolation--formatting)
+* [2.022 — String Properties & Methods](#2022--string-properties--methods)
 
-2.022   
-    # String properties and methods
-  - concatenate strings with "+", ie. x = x + "it is nice"
-  - strings can be multiplied *
-  - comments in python start with #
-  - carefull when string exists in int column cause it supports addition and mutiplication
-  - x.+tab - when tab pressed will display methods for the string defined as x
-  - x.split('i') i = list with example letter to split on, otherwise based on white space 
-  
-2.024   
-    # string interpolation - variable into string
-  - .format() print('string {}'.format('INSERTED')) = "string INSERTED"
-  - .format() index positions and keywords ex. print('string {1} {a}'.format(a='str0','str1'))
-  - float formatting "{value:width.precision f}"
-  - ex. print("The result{r:1.3f}".format(r=result)) {r:width.precision}
-  - newer method, formattet string : print(f'{name} is {age} years old.') as of python 3.6
-  - https://pyformat.info/ #string formatting documentation  
+---
 
-2.026   
-    # lists
-  - separated by ',' - flexible with dtypes they can hold ['string', int, float]
-  - suports len(my_list), indexing mylist[0], slicing mylist[1:],
-  - support concatenation +
-  - support change new_list[0] = 'new_first_el'
-  - .append() - adding list element to the end
-  - .pop(), .pop(index_location) - removing list element fro the end
-  - .sort(), revers() sorting, reversing in place, actually sorts/reverses list
-  - .sort() sorted_list = my_list.sort() - this wont work
-  - nested_lis: [1,2,[3,4]]t my_list[0][1] gives [1,4]  
-  
-2.028   
-    # dictionaries - unordered key:value pairing
-  - my_dict = {'key1':'value1','key2':'value2'}
-  - my_dict['key1'] will show value1
-  - flexible, can hold key pairs with: 'string', list or my_dict
-  - nested keys syntax: my_dict['key']['nested_key'] or ['key'][index].method()
-  - adding dic_name['new_key'] = 'new_val', replacing dic_name['ex_key'] = 'new_val'
-  - .keys, .values, .items    
-  
-2.030   
-    # tuples (a,b,c) tuples, instead of [a,b,c] - list  
-  - similar to lists but immutable  
-  - type() object type  
-  - .count(''), .index()    
-
-2.031   
-    # sets - unordered collections of unique elements  
-  - set(my_list) to get unique val from my_list    
-
-2.032  
-    # Booleans bool capitalized True, False  
-  - comments 
-
-2.033   
-    # I/O basic files  
-  - %%writefile myfile.txt  
-  - myfile = open('myfile.txt')  
-  - myfile.read(), myfile.seek(0) - reset read  
-  - pwd  - shows directory of current jupyter notebook location  
-  - myfile.close() - best practice  
-  - with open('myfile.txt', mode='r') as my_file:  
-          contents = my_file.read()   
-  - "shift + tab" opens function signature with parameters details
-  -.mode='r'-read only, 'w' write only (will overwrite or create new!)
-      'a'-appned only (will add on to files)
-      'r+'- reading and writing
-      'w+' - writing and reaidng (overwrites ex files or cr new f.)
-
-2.034   
-    # base subject  
-  - comment
-
-2.035   
-    # base subject  
-  - comment
-
-# Stratascratch Study Log
-
-## Index (Newest First)
+## Stratascratch Study Log
 * [3.016 — pd.merge() & Joins](#3016--pdmerge--joins)
 * [3.015 — pd.concat() vs pd.merge()](#3015--pdconcat-vs-pdmerge)
 * [3.014 — pd.concat()](#3014--pdconcat)
@@ -123,6 +48,225 @@ Learning progress, best practices and code examples:
 * [3.001 — Summary: Python & Pandas](#3001--summary-python--pandas)
 
 ---
+
+1.001    
+    # "code is read much more often than it is written", “readability counts”  
+  - Official PEP 8 coding style guidelines and industry standards for clean Python code:  
+  - https://python.org/pep-0008/  
+
+1.002    
+    # practice resources  
+  - http://codingbat.com/python #basic practice
+  - https://projecteuler.net/archives #More Mathematical (and Harder) Practice
+  - http://www.codeabbey.com/index/task_list #List of Practice Problems
+  - https://www.reddit.com/r/dailyprogrammer #A SubReddit Devoted to Daily Practice Problems:
+  - http://www.pythonchallenge.com/ #tricky with very few hints
+
+
+---
+
+## 2.035 — Base Subject (Placeholder)
+**Core Concept:** Add your topic summary here.
+
+**Notes & Gotchas:**
+* Add notes or edge cases here.
+
+````python
+# Add code examples here
+````
+
+---
+
+## 2.034 — Base Subject (Placeholder)
+**Core Concept:** Add your topic summary here.
+
+**Notes & Gotchas:**
+* Add notes or edge cases here.
+
+````python
+# Add code examples here
+````
+
+---
+
+## 2.033 — Basic File I/O
+**Core Concept:** Read, write, and append text files safely in Python and Jupyter Notebooks.
+
+**Notes & Gotchas:**
+* After calling `.read()`, the file cursor sits at the end of the file; call `.seek(0)` to reset the cursor back to the beginning before reading again.
+* Always close manually opened files with `.close()`, or use a `with open(...)` block to close them automatically.
+* **File Modes:**
+  * `'r'` — Read only.
+  * `'w'` — Write only (overwrites existing file or creates a new one).
+  * `'a'` — Append only (adds new content to the end of an existing file).
+  * `'r+'` — Reading and writing.
+  * `'w+'` — Writing and reading (overwrites existing file or creates a new one).
+* **Jupyter Shortcuts:** Use `pwd` to check your current working directory, `%%writefile` to create a file from a cell, and `Shift + Tab` inside a function call to view its signature and parameters.
+
+````python
+# Jupyter magic command to write a quick text file
+%%writefile myfile.txt
+Hello world
+
+# Manual open, read, reset cursor, and close
+myfile = open("myfile.txt")
+myfile.read()
+myfile.seek(0)     # Reset cursor to start of file
+myfile.close()     # Best practice when not using 'with'
+
+# Recommended context manager approach (auto-closes file)
+with open("myfile.txt", mode="r") as my_file:
+    contents = my_file.read()
+````
+
+---
+
+## 2.032 — Booleans
+**Core Concept:** Represent logical truth values using Python's built-in `bool` type.
+
+**Notes & Gotchas:**
+* Boolean keywords in Python must be capitalized (`True` and `False`), unlike lowercase `true`/`false` in other languages.
+
+````python
+is_active = True
+is_empty = False
+type(is_active)  # bool
+````
+
+---
+
+## 2.031 — Sets
+**Core Concept:** Store unordered collections of unique elements and deduplicate lists.
+
+**Notes & Gotchas:**
+* Sets automatically discard duplicate values and do not preserve item order or support indexing.
+
+````python
+my_list = [1, 1, 2, 2, 3, 3]
+unique_vals = set(my_list)  # {1, 2, 3}
+````
+
+---
+
+## 2.030 — Tuples
+**Core Concept:** Store ordered sequences of items that cannot be modified after creation.
+
+**Notes & Gotchas:**
+* Tuples use parentheses `(a, b, c)` instead of square brackets `[a, b, c]`.
+* Because tuples are **immutable**, trying to reassign an element (`my_tuple[0] = "new"`) raises a `TypeError`.
+
+````python
+my_tuple = ("a", "b", "c")
+type(my_tuple)         # tuple
+
+my_tuple.count("a")    # Count occurrences of 'a'
+my_tuple.index("b")    # Find first index of 'b'
+````
+
+---
+
+## 2.028 — Dictionaries
+**Core Concept:** Store data as unordered `key: value` pairs for fast lookups and nested structures.
+
+**Notes & Gotchas:**
+* Dictionary values are flexible and can store strings, numbers, lists, or even other nested dictionaries.
+* Assigning to an existing key overwrites its value; assigning to a new key adds a new entry.
+
+````python
+my_dict = {"key1": "value1", "key2": "value2"}
+my_dict["key1"]  # 'value1'
+
+# Adding and updating keys
+my_dict["new_key"] = "new_val"
+my_dict["key1"] = "updated_val"
+
+# Nested dictionary and list access
+nested = {"key": {"nested_key": ["a", "b"]}}
+nested["key"]["nested_key"][0].upper()  # 'A'
+
+# Inspect keys, values, and pairs
+my_dict.keys()
+my_dict.values()
+my_dict.items()
+````
+
+---
+
+## 2.026 — Lists
+**Core Concept:** Store ordered, mutable sequences that can hold mixed data types.
+
+**Notes & Gotchas:**
+* `.sort()` and `.reverse()` modify the list **in place** and return `None`. Writing `sorted_list = my_list.sort()` stores `None` instead of the sorted list.
+* `.pop()` removes and returns the last element by default, or the element at a specific index `.pop(index)`.
+
+````python
+my_list = ["string", 10, 3.14]
+len(my_list)
+my_list[0]               # Indexing
+my_list[1:]              # Slicing
+my_list + ["extra"]      # Concatenation
+
+# Mutating elements
+my_list[0] = "new_first_el"
+my_list.append("end_item")
+my_list.pop()            # Removes last item
+my_list.pop(0)           # Removes item at index 0
+
+# Sorting in place (do not assign to a variable)
+num_list = [4, 1, 3, 2]
+num_list.sort()
+num_list.reverse()
+
+# Nested list indexing
+nested_list = [1, 2, [3, 4]]
+nested_list[2][1]        # 4
+````
+
+---
+
+## 2.024 — String Interpolation & Formatting
+**Core Concept:** Inject variables and formatted numbers into strings using `.format()` or f-strings.
+
+**Notes & Gotchas:**
+* **f-strings** (`f"..."`, introduced in Python 3.6) are the cleanest and most modern way to embed expressions directly inside strings.
+* Float formatting syntax follows `{value:width.precisionf}` (for example, `{r:1.3f}` formats to 3 decimal places).
+* Full reference guide: [PyFormat.info — Using % and .format()](https://pyformat.info).
+
+````python
+# 1. .format() with positional and keyword arguments
+print("string {}".format("INSERTED"))                  # 'string INSERTED'
+print("string {1} {a}".format("str0", "str1", a="kw")) # 'string str1 kw'
+
+# 2. Float precision formatting: {value:width.precisionf}
+result = 100 / 777
+print("The result {r:1.3f}".format(r=result))          # 'The result 0.129'
+
+# 3. f-strings (Python 3.6+)
+name = "Alice"
+age = 30
+print(f"{name} is {age} years old.")
+````
+
+---
+
+## 2.022 — String Properties & Methods
+**Core Concept:** Manipulate strings using concatenation, repetition, and built-in string methods.
+
+**Notes & Gotchas:**
+* Be careful when numeric-looking data is stored as strings—`"5" + "5"` concatenates to `"55"` instead of adding to `10`, and `"5" * 3` repeats to `"555"`.
+* In Jupyter Notebooks, type `x.` and press **`Tab`** to browse all available methods on string `x`.
+* `.split()` splits on whitespace by default, or on a specific character if passed as an argument (e.g., `x.split("i")`).
+
+````python
+# Comments in Python start with #
+x = "Hello world"
+x = x + " it is nice"   # String concatenation (+)
+"ha" * 3                # String multiplication ('hahaha')
+
+# Splitting strings into a list
+x.split()               # Splits on whitespace
+x.split("i")            # Splits on every 'i'
+````
 
 ## 3.016 — pd.merge() & Joins
 **Core Concept:** Combine two DataFrames horizontally using shared keys, or use a cross join to compare rows within the same table.
