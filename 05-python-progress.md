@@ -18,7 +18,7 @@ Learning progress, best practices and code examples:
 
 ---
 
-## Python Fundamentals study log
+## Python Fundamentals Study Log
 * [2.035 — Base Subject (Placeholder)](#2035--base-subject-placeholder)
 * [2.034 — Base Subject (Placeholder)](#2034--base-subject-placeholder)
 * [2.033 — Basic File I/O](#2033--basic-file-io)
@@ -65,31 +65,21 @@ Learning progress, best practices and code examples:
 
 ---
 
-## 2.035 — Base Subject (Placeholder)
-**Core Concept:** Add your topic summary here.
+---
+
+## 2.034 — Progress template (placeholder)
+**Core Concept:**  topic summary here.
 
 **Notes & Gotchas:**
 * Add notes or edge cases here.
 
 ````python
-# Add code examples here
+# Code examples
 ````
 
 ---
 
-## 2.034 — Base Subject (Placeholder)
-**Core Concept:** Add your topic summary here.
-
-**Notes & Gotchas:**
-* Add notes or edge cases here.
-
-````python
-# Add code examples here
-````
-
----
-
-## 2.033 — Basic File I/O
+## 2.033 — File I/O
 **Core Concept:** Read, write, and append text files safely in Python and Jupyter Notebooks.
 
 **Notes & Gotchas:**
